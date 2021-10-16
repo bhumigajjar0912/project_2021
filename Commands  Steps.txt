@@ -1,0 +1,55 @@
+1) sudo apt update
+2) sudo apt install apache2 -y
+INSTALL DOCKER
+3)sudo apt-get remove docker docker-engine docker.io containerd runc(Remove previous version of docker)
+4)Set up the repository
+
+4.1)Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+4.2)Add Docker’s official GPG key:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+4.3)Use the following command to set up the stable repository. 
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+5)Install Docker Engine
+5.1) and install the latest version of Docker Engine and containerd
+sudo apt-get update
+ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+5.2)Verify that Docker Engine is installed correctly by running the hello-world image.
+sudo docker run hello-world
+
+POST INSTALLAION STEPS
+
+6)Create the docker group.
+sudo groupadd docker
+
+7)Add your user to the docker group.
+sudo usermod -aG docker $USER
+
+8)Configure Docker to start on boot
+sudo systemctl enable docker.service
+ sudo systemctl enable containerd.service
+
+
+ADD FILES from GITHUB
+
+9)sudo apt install git
+10) git clone https://github.com/bhumigajjar0912/project_2021
+
+
+11)CREATE IMAGE from DOCKERFILE
+ docker build -t project1:v1 -f Dockerfile .
+
+12)create container 
+docker run -itd --name project -p 1234:80 apache/docker:projectv1
+
+13)Restart policy set to always
+docker update project --restart always
