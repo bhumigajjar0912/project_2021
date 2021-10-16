@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: springgreen;
+            font-size: 20px;
+            margin-top: 15%;
+            margin-left: 33%;
+            padding: 20px;
+            width: 30%;
+            text-align: justify;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Enter your linux command here:</h3>
+        <br>
+
+        <form action="cgi.py" method="post">
+            <input type="text" name="code">
+            <button>Run!</button>
+        </form>
+    </div>
+</body>
+
+</html>

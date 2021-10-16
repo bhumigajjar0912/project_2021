@@ -1,0 +1,71 @@
+h1 {
+			color: darkslategrey;
+			text-align: center;
+            background-color: darkturquoise;
+            margin: 30px;
+}
+div{
+    margin: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+	
+span{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 20px;
+}
+td head{
+    background-color: gray;
+}
+
+a{
+    font-size: 20px;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+input[type=text]{
+    margin: 20px;
+    padding: 5px;
+}
+
+button{
+    padding: 5px;
+    width: 100px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: lightseagreen;
+}
+
+a::before{
+    content: "\21d2   ";
+    font-weight: bold;
+    margin-left: 45%;
+}
+h3{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 30px;
+    
+}
+form{
+    text-align: justify;
+    margin: 25px;
+}
+
