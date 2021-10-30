@@ -4,11 +4,7 @@ RUN apt update
 RUN apt install apache2 -y
 RUN apt-get install apache2-utils
 RUN apt clean
-ADD index.html /var/www/html/index.html
-ADD form.html /var/www/html/form.html
-ADD output.html /var/www/html/output.html
-ADD style.css /var/www/html/style.css
-ADD cgi.py /var/www/cgi-bin/cgi.py
+RUN apt inatall python3 -y
 
 EXPOSE 80
 
